@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <div>
+    <select name="gender" class="select_gender" id="gender" onchange="changeLabel(this)">
+        <option disabled hidden selected>Pilih</option>
+        <option value="ada">ada</option>
+        <option value="tidak">tidak</option>
+    </select>
+  </div>
+  <div id="forms">
+    <div id="name_wrapper">
+        <label for="" id="nama">nama</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+      <select name="jabatan" class="select_jabatan" id="jabatan" onchange="changeJabatan(this)">
+          <option disabled hidden selected>Pilih</option>
+          <option value="BRI">Pekerja BRI</option>
+          <option value="purnabakti">purnabakti</option>
+      </select>
+    </div>
+    <div id="jabatan_wrapper">
+      <label for="" id="jabatan">nomor id</label>
+      <input type="text" id="jabatan" name="jabatan">
+  </div>
+  <div id="jabatan_rekomendasi">
+    <label for="" id="nama">jabatan rekomendasi</label>
+    <input type="text" id="name" name="name">
+</div>
+    <button type="button" onclick="">Kirim</button>
+  </div>
+</form>
+
+<script>
+  function changeLabel(e) {
+    let changeOption = document.getElementById('forms');
+    if(e.value == "ada") {
+      changeOption.style.display = "block";
+    }else {
+      changeOption.style.display = "none";
+    }
+  }
+
+  function changeJabatan(e) {
+    let changeJabatan = document.getElementById('jabatan_rekomendasi');
+    if(e.value == "BRI") {
+      changeJabatan.style.display = 'block';
+    }else {
+      changeJabatan.style.display = 'none';
+    }
+  }
+
+  document.getElementById("forms").style.display = "none";
+</script>
+</body>
+</html>

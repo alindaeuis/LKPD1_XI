@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: bisque;
+  padding: 15px;
+  margin: 40px auto;
+  width: 90%;
+  border-radius: 100px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+}
+
+.header-navbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.list-navbar ul{
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+
+.list-navbar a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+
+list-navbar a:hover {
+  color: #fff;
+  /* transition: all 0.5s; */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.content-text {
+  width: 30rem;
+}
+
+.content-text h1 {
+  font-size: 60px;
+}
+
+.content-text p {
+  margin-bottom: 10px;
+}
+
+.content-text button {
+  background-color: #d3944d;
+  padding: 8px 15px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+.image img {
+  width: 350px;
+}
+
+.main-content {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.header-content h1 {
+  font-size: 40px;
+}
+
+hr {
+  margin-bottom: 10px;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.card-product {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.product1 {
+  background-color: #ede9e9;
+  box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.5);
+  height: 500px;
+  border-radius: 10px;
+}
+/* .product2 {
+  background-color: #ede9e9;
+  box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.5);
+  height: 500px;
+  border-radius: 10px;
+}
+.product3 {
+  background-color: #ede9e9;
+  box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.5);
+  height: 500px;
+  border-radius: 10px;
+} */
+
+.product1 img {
+  width: 250px;
+  margin: 20px;
+}
+.product2 img {
+  width: 250px;
+  margin: 20px;
+}
+.product3 img {
+  width: 250px;
+  margin: 20px;
+}
+
+.content-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.content-product p {
+  margin-bottom: 15px;
+}
+
+.total-suka {
+  margin-bottom: 10px;
+}
+
+.readMore-button button{
+  padding: 5px 10px;
+  background-color: #d3944d;
+  border-radius: 8px;
+  color: #fff;
+}

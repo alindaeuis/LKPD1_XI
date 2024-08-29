@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .alert  {
+      margin-bottom: 20px;
+      background-color: #fff;
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      margin: 8rem auto;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5 );
+      border-radius: 10px;
+    }
+
+    #countdown {
+      font-size: 70px;
+      line-height: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="alert" id="alert">
+    <h1>hitung mundur</h1>
+    <div id="countdown">10</div>
+    <button class="mulai" onclick="countdown()">Mulai</button>
+    <br>
+    <button class="berhenti" onclick="pauseTimer()">Berhenti</button>
+  </div>
+  <script>
+    // function setAlert() {
+    //   let alert = document.getElementById('alert');
+    //   alert.style.display = 'block';
+
+    //   setTimeout( function() {
+    //     alert.style.display = 'none';
+    //   }, 5000);
+    // }
+
+    // document.getElementById('button').onclick = function() {
+    //   setAlert();
+    // }
+
+    let timerInterval = null;
+    // let timeLeft = 10;
+    function countdown() {
+      timeLeft = 10;
+      timerInterval = setInterval( function() {
+        timeLeft--;
+        document.getElementById("countdown").innerHTML = timeLeft;
+        if(timeLeft <= 1) {
+          clearInterval(timerInterval);
+          document.getElementById("countdown").innerText = "Waktu Habis";
+          document.getElementById("countdown").style.fontSize = "30px";
+          document.getElementById("countdown").style.color = "red";
+          countdown.style.fontSize = '20px';
+          countdown.style.color = 'red';
+
+        }
+      }, 1000);
+    }
+
+    // function onTimesUp() {
+    //   clearInterval(`${downloadTimer}`);
+    //   downloadTimer = undefined;
+    // }
+
+    function pauseTimer() {
+      clearInterval(timerInterval);
+    }
+  </script>
+</body>
+</html>

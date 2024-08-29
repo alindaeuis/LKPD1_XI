@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="date" id="input_date">
+  <button id="button" onclick="showDate()">Submit</button>
+
+  <p id="display_date">Tidak mencari data...</p>
+
+  <script>
+    function showDate() {
+      let date = document.getElementById('input_date').value;
+      let displayDate = document.getElementById('display_date');
+      // displayDate.innerText = " Mencari data tanggal " + date;
+      // date.style.color = 'blue';
+
+       getDate = new Date(date);
+
+      let d = getDate.getDate();
+      let m = getDate.getMonth();
+      let y = getDate.getFullYear();
+
+    const month = ["januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "sepetember","oktober", "november", "desember"];
+
+    
+
+      let formatMonth = d + ' ' + month[m] + ' ' + y;
+
+      displayDate.innerText = "Mencari data tanggal " + formatMonth;
+
+      
+    }
+  </script>
+</body>
+
+</html>
